@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+"""System installation and unpacked source-tree entry point."""
+from pathlib import Path
+import sys
+
+root = Path(__file__).resolve().parent.parent
+source = root if (root / "chatgpt_web").is_dir() else root / "lib/chatgpt-web"
+sys.path.insert(0, str(source))
+from chatgpt_web.__main__ import main
+
+sys.exit(main())

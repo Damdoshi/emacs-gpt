@@ -1,0 +1,52 @@
+.TH CHATGPT-WEB 1 "2026-11-24" "0.1.0" "User Commands"
+.SH NAME
+chatgpt-web \- local website companion for terminal Emacs
+.SH SYNOPSIS
+.B chatgpt-web
+.RI [ options ] " command"
+.SH DESCRIPTION
+Controls the ChatGPT website using a dedicated Chromium profile and the local
+DevTools pipe. Runs without an X server in normal operation. Requires no API key.
+Website compatibility and terminal authentication are experimental.
+.SH COMMANDS
+.TP
+.B auth
+Interact with the website's authentication forms in a terminal.
+.TP
+.B bridge
+Serve JSON-line requests on stdin and send events and results on stdout.
+.TP
+.B doctor [--probe]
+Report dependencies; optionally test browser startup and HTTPS website loading.
+.TP
+.B apply-patch FILE --directory DIR [--strip N] [--check]
+Check, then apply an explicitly selected patch using git apply.
+.SH OPTIONS
+.TP
+.B --profile DIR
+Use a dedicated persistent Chromium profile.
+.TP
+.B --browser FILE
+Select the Chromium executable.
+.TP
+.B --selectors FILE
+Load JSON selector overrides.
+.TP
+.B --headed
+Use a visible browser for optional interactive authentication. Requires display.
+.TP
+.B --timeout SECONDS
+Maximum response-following time; default 600.
+.SH EMACS
+Start with M-x chatgpt-web. Use M-x chatgpt-web-login for authentication.
+See /usr/share/doc/emacs-chatgpt-web/README.fr.md for controls and limitations.
+.SH FILES
+.I ~/.local/share/chatgpt-web/profile
+Dedicated private browser profile, unless XDG_DATA_HOME or --profile changes it.
+.SH SECURITY
+Passwords are accepted interactively or through private stdin, never as command
+line arguments. Browser session cookies persist. Scripts run only after an
+explicit user command and have the user's normal permissions.
+.SH LIMITATIONS
+Some MFA, SSO, passkey or visual checks require a browser interaction that this
+text interface cannot provide. No protective measures or rate limits are bypassed.

@@ -1,0 +1,17 @@
+Source: emacs-chatgpt-web
+Section: editors
+Priority: optional
+Maintainer: ChatGPT Web contributors <maintainers@example.invalid>
+Build-Depends: debhelper-compat (= 13), python3 (>= 3.10), emacs-nox (>= 28.1) | emacs (>= 28.1), git
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: emacs-chatgpt-web
+Architecture: all
+Depends: ${misc:Depends}, python3 (>= 3.10), emacs-nox (>= 28.1) | emacs (>= 28.1), chromium, git
+Description: Personal ChatGPT website interface for terminal Emacs
+ A new Emacs mode and Python companion controlling a dedicated headless Chromium
+ session through local pipes. Supports conversation buffers, website login,
+ attachments, explicit script execution and checked patch application.
+ No ELPA package or OpenAI API key is used. Website compatibility and fully
+ text-based authentication are experimental.

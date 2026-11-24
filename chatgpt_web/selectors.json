@@ -1,0 +1,9 @@
+{
+  "messages": "[data-message-author-role]",
+  "content": ".markdown, [data-message-content]",
+  "prompt": "#prompt-textarea, textarea[data-testid=\"prompt-textarea\"], textarea[placeholder*=\"Message\"]",
+  "send": "button[data-testid=\"send-button\"], button[aria-label=\"Send prompt\"], button[aria-label=\"Envoyer le message\"]",
+  "stop": "button[data-testid=\"stop-button\"], button[aria-label=\"Stop generating\"], button[aria-label=\"Arrêter la génération\"]",
+  "upload": "input[type=\"file\"]",
+  "account": "[data-testid=\"profile-button\"], [data-testid=\"accounts-profile-button\"], [data-testid=\"account-menu-button\"], [data-testid=\"user-menu-button\"]"
+}

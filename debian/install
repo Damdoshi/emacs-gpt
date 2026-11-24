@@ -1,0 +1,6 @@
+bin/chatgpt-web usr/bin/
+chatgpt_web/*.py usr/lib/chatgpt-web/chatgpt_web/
+chatgpt_web/page.js usr/lib/chatgpt-web/chatgpt_web/
+chatgpt_web/selectors.json usr/lib/chatgpt-web/chatgpt_web/
+emacs/chatgpt-web.el usr/share/emacs/site-lisp/chatgpt-web/
+debian/50chatgpt-web.el etc/emacs/site-start.d/
